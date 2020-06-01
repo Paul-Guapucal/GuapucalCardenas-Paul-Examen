@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package ec.edu.ups.modelo;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,10 +15,11 @@ public class Electrodomestico {
     
     private int codigo;
     private String descripcion;
-    private double precioBase;
+    double precioBase;
     private String color;
     private char consumoEnergetico;
     private int peso;
+    private List<Electrodomestico> electrodomesticos;
 
     public Electrodomestico() {
     }
@@ -28,6 +31,7 @@ public class Electrodomestico {
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
+        electrodomesticos = new ArrayList<>();
     }
 
     public int getCodigo() {
@@ -78,6 +82,10 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
+    public double obtenerPrecioFinal(){
+        return 0.00;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 7;
